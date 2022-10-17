@@ -9,7 +9,8 @@ app.get('/', (_request, response) => {
 });
 
 app.get('/products', productsController.allControllers);
-app.get('/product/:id', productsController.allControllersId);
+
+app.get('/products/:id', productsController.allControllersId);
 // não remova essa exportação, é para o avaliador funcionar
 // você pode registrar suas rotas normalmente, como o exemplo acima
 // você deve usar o arquivo index.js para executar sua aplicação 

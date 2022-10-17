@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "e961d187-dd7e-4a95-ac34-9ca26e5cbf85",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://store_manager:3000/products",
+    "url": "http://store_manager:3000/products",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-17T22:56:19.469Z",
+    "modified": "2022-10-17T22:56:29.543Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
