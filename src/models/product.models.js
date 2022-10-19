@@ -2,7 +2,7 @@ const connection = require('./connection');
 
 const modelProducts = async () => {
   const [result] = await connection.execute(
-    'SELECT * FROM products',
+    'SELECT * FROM StoreManager.products',
   );
   return result;
 };
