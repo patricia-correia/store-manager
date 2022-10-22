@@ -14,7 +14,15 @@ const allControllersId = async (req, response) => {
   response.status(status).json(message);
 };
 
+const crieatControlerProdutc = async (req, response) => {
+  const product = req.body;
+  const { status, message } = await productService.serviceCreatProduct(product);
+  const search = { id: message, name: product.name };
+  response.status(status).json(search);
+};
+
 module.exports = {
   allControllers,
   allControllersId,
+  crieatControlerProdutc,
 };

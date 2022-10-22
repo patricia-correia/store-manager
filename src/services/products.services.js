@@ -17,7 +17,13 @@ const serviceProductsId = async (id) => {
   return { message: errorMessages.NOT_FOUND_PRODUCT, status: codeStatus.HTTP_ERROR_STATUS };
 };
 
+const serviceCreatProduct = async (product) => {
+  const result = await productModel.modelCreatProduct(product.name);
+  return { message: result, status: codeStatus.HTTP_CREATED_RIGHT_STATUS };
+};
+
 module.exports = {
   serviceProducts,
   serviceProductsId,
+  serviceCreatProduct,
 };
