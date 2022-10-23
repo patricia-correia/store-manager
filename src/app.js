@@ -1,5 +1,6 @@
 const express = require('express');
 const productsController = require('./controllers/products.controller');
+const validationProduct = require('./middlewares/product.validation');
 
 const app = express();
 app.use(express.json());
@@ -9,7 +10,7 @@ app.get('/', (_request, response) => {
   response.send();
 });
 
-app.post('/products', productsController.crieatControlerProdutc);
+app.post('/products', validationProduct, productsController.crieatControlerProdutc);
 
 app.get('/products', productsController.allControllers);
 
