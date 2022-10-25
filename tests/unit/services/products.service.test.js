@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const sinon = require('sinon');
 
 const productService = require('../../../src/services/products.services');
-const productModel = require('../../../src/models');
+const { productModel } = require('../../../src/models');
 const { produtsDb } = require('../models/mocks/produtcs.model.mock');
 
 describe('Teste de unidade de produtos do services', function () {

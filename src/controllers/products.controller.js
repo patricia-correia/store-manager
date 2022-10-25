@@ -21,8 +21,20 @@ const crieatControlerProdutc = async (req, response) => {
   response.status(status).json(search);
 };
 
+const updateControler = async (req, response) => {
+  const { name } = req.body;
+  const { id } = req.params;
+  try {
+    const productUpdate = await productService.serviceUpdate(name, id);
+    response.status(200).json(productUpdate);
+  } catch (error) {
+    response.status(500).json({ message: error });
+  }
+};
+
 module.exports = {
   allControllers,
   allControllersId,
   crieatControlerProdutc,
+  updateControler,
 };

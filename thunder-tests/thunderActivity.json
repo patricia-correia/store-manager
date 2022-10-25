@@ -4,13 +4,19 @@
     "colId": "history",
     "containerId": "",
     "name": "http://store_manager:3000/products",
-    "url": "http://store_manager:3000/products",
-    "method": "GET",
+    "url": "http://store_manager:3000/products/1?name=martelo do batman",
+    "method": "PUT",
     "sortNum": 0,
     "created": "2022-10-17T22:56:19.469Z",
-    "modified": "2022-10-17T22:56:29.543Z",
+    "modified": "2022-10-25T12:51:29.120Z",
     "headers": [],
-    "params": [],
+    "params": [
+      {
+        "name": "name",
+        "value": "martelo do batman",
+        "isPath": false
+      }
+    ],
     "tests": []
   }
 ]
