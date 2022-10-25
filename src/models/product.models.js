@@ -23,8 +23,25 @@ const modelCreatProduct = async (product) => {
   return insertId;
 };
 
+/* const modelUpdate = async (name, id) => {
+  const [result] = await connection.execute(
+    'UPDATE StoreManager.products SET name = ? WHERE id = ?',
+    [name, id],
+  );
+  return result;
+}; */
+
+const modelProductsDelete = async (productId) => {
+  const result = await connection.execute(
+    `DELETE FROM StoreManager.products WHERE id = ${productId}`,
+  );
+  return result;
+};
+
 module.exports = {
   modelProducts,
   modelProductsId,
   modelCreatProduct,
+  // modelUpdate,
+  modelProductsDelete,
 };

@@ -21,7 +21,7 @@ const crieatControlerProdutc = async (req, response) => {
   response.status(status).json(search);
 };
 
-const updateControler = async (req, response) => {
+/* const updateController = async (req, response) => {
   const { name } = req.body;
   const { id } = req.params;
   try {
@@ -30,11 +30,19 @@ const updateControler = async (req, response) => {
   } catch (error) {
     response.status(500).json({ message: error });
   }
+}; */
+
+const deleteProductController = async (req, res) => {
+  const { id } = req.params;
+  const { status, message } = await productService.serviceDelete(Number(id));
+  if (message) return res.status(status).json({ message });
+  return res.status(status).json();
 };
 
 module.exports = {
   allControllers,
   allControllersId,
   crieatControlerProdutc,
-  updateControler,
+  // updateController,
+  deleteProductController,
 };
